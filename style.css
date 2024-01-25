@@ -1,0 +1,361 @@
+*{
+  margin: 0;
+  padding: 0;
+  @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+  font-family: 'Raleway', sans-serif;
+}
+
+html, body{
+  overflow-x: hidden; /*Tira a rolagem lateral/eixo X*/
+}
+
+h1{
+  visibility: hidden;
+  position: absolute;
+}
+
+/* Color Theme Swatches in RGBA */
+:root{
+--cor0: rgb(235, 226, 226);
+--cor1: rgba(61, 78, 89, 1);
+--cor2: rgba(242, 159, 4, 1);
+--cor3: rgba(242, 135, 4, 1);
+--cor4: rgba(216, 22, 4, 1);
+--cor5: rgba(165, 3, 3, 1);
+--cor6: #000000;
+}
+
+.capa{
+  opacity: 80%;
+}
+
+/* Menu lateral presente em todas as páginas do site*/
+
+/* Logo size*/
+.logo{
+  width: 230px; 
+  height: 220px;
+  padding-top: 2.5rem; 
+}
+
+.menu_lateral {
+    height: 100%; 
+    width: 220px;
+    margin-right: solid var(--cor6);
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    left: 0;
+    background-color: var(--cor1);
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 10px;
+    border-right: solid thin var(--cor1);
+  }
+
+  .botton_menu{
+    margin-top: 5rem;
+    scale: 1.07;
+  }
+  .texto{
+    padding-top:0.5rem;
+    font-weight: 400;
+  }
+
+  /* Botões e links menu lateral */
+
+  .menu_lateral a {
+    transform: rotate(-10deg);
+    display: block;
+    background-color: var(--cor0);
+    padding: 6px 8px 7px 16px;
+    text-decoration: none;
+    font-size: 1.6rem;
+    color: var(--cor3);
+    text-shadow: 1px 1px var(--cor6);
+  }
+  
+  /* Efeito hover botões e links */
+
+  .menu_lateral a:hover {
+    background-color: var(--cor2);
+    color: var(--cor5);
+  }
+  /* Fim menu lateral */
+
+  /* Área principal/backgroud de todas as páginas */
+
+  .conteudo_principal{
+    background: #FDC830;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom #F37335, #FDC830);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #F37335, #FDC830); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+
+  /*Estilo dos cards da página inicio*/
+  .cards{
+    padding: 5rem 1rem 1rem 0;
+  }
+
+  .cards a img{
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    border-radius: 5px;
+  }
+
+  .cards a img:hover{
+    scale: 1.11;
+    border: solid var(--cor4);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .cards_image{
+    width: 240px;
+    height: 240px;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.2rem;
+    border-radius: 2%;
+  }
+  .lista_index{
+    padding-left: 300px;
+    column-count: 3;
+    column-gap: 0;
+  }
+
+  .lista_index img{
+    height: 220px;
+    width: 220px;
+  }
+
+  .icone img{
+    height: 50px;
+    width: 50px;
+    padding: 1.5rem 2rem;
+   }
+
+  .icone p{
+    padding: 0.25;
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+
+  /* Fim do item */
+
+  /* Estilo do botão de entrega */
+ 
+  #entrega img {
+    position:fixed;
+    right: 15px;
+    bottom:22px;
+    width: 5.5rem;
+    height: 5.5rem;
+    border-radius: 50%;
+    background-color: var(--cor1);
+    opacity: 60%;
+    border: solid thin var(--cor0);
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+    }
+  
+   #entrega .texto_entrega{
+    opacity: 60%;
+    position:fixed;
+    background-color: var(--cor0);
+    right: 50px;
+    bottom: 40px;
+    display: list-item;
+    visibility:hidden;
+    text-decoration: none;
+    font-size: 1.2rem;
+    list-style: none;
+    width: 220px;
+    height: 2rem;
+    border: solid thin var(--cor1);
+    border-radius: 30px 0 0 30px;
+    text-align: center;
+    padding-top: 0.6rem;
+    color: var(--cor4);
+    transition: opacity 0.3s;
+   }
+
+   #entrega img:hover{
+    opacity: 100%;
+    scale: 1.1;
+   }
+
+   #entrega:hover .texto_entrega{
+    position:fixed;
+    right: 100px;
+    bottom:50px;
+    visibility:visible;
+    opacity: 100%;
+   }
+
+   /* Fim do estilo do botão de entrega */
+
+  /* Estilo do footer */
+
+  footer{
+    padding-left: 190px;
+    height: 7rem;
+    display: flex;
+    background-color: var(--cor5);
+  }
+
+  footer img{
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .localizacao{
+    padding:  2rem 0 1.5rem 7rem;
+    width: 18rem;
+  }
+
+  .localizacao a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cor0);
+    font-weight: 500;
+    text-shadow: 1px 1px var(--cor6);
+    letter-spacing: 0.1rem;
+  }
+
+  .localizacao a:hover{
+    text-decoration: underline;
+  }
+
+  .redes_sociais{
+    padding: 2.3rem 0 1.5rem 25rem;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .redes_sociais a, .numero_telefone{
+    text-decoration: none;
+    color: var(--cor0);
+    display: flex;
+    gap: 0.3rem;
+    text-shadow: 1px 1px var(--cor6);
+    letter-spacing: 0.1rem;
+  }
+
+  a .numero_telefone{
+    padding-top: 0.4rem;
+  }
+
+  .redes_sociais a:hover .numero_telefone{
+    text-decoration: underline;
+  }
+
+  /*Fim do estilo do Footer
+
+
+  /* Estilo da página Cardápio */
+
+  .conteudo_cardapio{
+    margin-left: 250px;
+    padding: 2rem 0 4rem 0;
+  }
+  .conteudo_cardapio h2{
+    margin-left: 2rem;
+    padding: 3rem 0 1.5rem 0;
+    text-decoration: underline;
+    font-size: 2rem;
+  }
+
+  .cardapio{
+    background-color:rgba(219, 95, 33, 0.184);
+    border-radius: 50px 0 0 50px;
+    margin: 1rem;
+  }
+
+  .itens_cardapio{
+  display: flex;
+  align-items: center;
+  padding-top: 0.4rem;
+  }
+
+  .itens_cardapio h3{
+    margin-left: 3rem;
+    padding-bottom: 0.3rem;
+  }
+
+  .itens_cardapio h4{
+    position: absolute;
+    right: 150px;
+  }
+
+  .conteudo_cardapio ul li{
+    margin-left: 6rem;
+    padding-bottom: 1rem;
+    list-style-type: none;
+  }
+
+  /* Fim do estilo da página do cardápio*/
+
+  /* Estilo da página promoções */
+
+  .cards_promocoes{
+    padding: 5rem 1rem 1rem 0;
+  }
+
+  .cards_promocoes a img{
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0% 100%);
+    border-radius: 5px;
+  }
+
+  .cards_promocoes a img:hover{
+    scale: 1.11;
+    border: solid var(--cor4);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  .cards_image_promocoes{
+    width: 320px;
+    height: 320px;
+    background-color: var(--cor2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0.2rem;
+    border-radius: 2%;
+  }
+  .lista_promocoes{
+    padding-left: 340px;
+    column-count: 2;
+    column-gap: 0;
+  }
+
+  .lista_promocoes img{
+    height: 300px;
+    width: 300px;
+  }
+
+  .texto_promocoes p{
+    padding-top: 1rem;
+    font-size: 1.1rem;
+  }
+
+  /* Fim do estilo da página do promocoes*/
+
+  /* Estilo da página quem somos */
+
+  .quem_somos{
+    margin-left: 250px;
+  }
+
+  .quem_somos h2{
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+
+  .quem_somos p{
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .quem_somos iframe{
+    padding-bottom: 25px;
+  }
+
+  /*Fim do Estilo da página quem somos*/
+  
